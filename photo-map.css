@@ -1,0 +1,35 @@
+html,
+body,
+#map-canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#image-detail {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1001;
+}
+
+#image-detail img {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid orange;
+  background-color: white;
+  z-index:1002;
+  overflow: auto;
+}
