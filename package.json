@@ -1,0 +1,11 @@
+{
+  "name": "photo-map",
+  "description": "A small app to display photos from a flickr account overlayed on a google map",
+  "author": "Luke Heron",
+  "repository": "https://github.com/ScruffMcBuff/photo-map",
+  "dependencies": [],
+  "devDependencies": {
+    "gulp-connect": "~2.0.6",
+    "gulp": "~3.8.8"
+  }
+}

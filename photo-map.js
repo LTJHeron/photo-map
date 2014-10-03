@@ -1,4 +1,5 @@
-$.ready(function () {
+$(document).ready(function () {
+  console.log('READY');
   var flickrApiKey = 'ac25ff63c0e26a66260ff9a6ba8fc0b2';
   var flickrURL = 'http://api.flickr.com/services/feeds/photos_public.gne';
   var flickrApiUrl = 'https://api.flickr.com/services/rest'
@@ -42,8 +43,6 @@ $.ready(function () {
         var long = photo.longitude;
         var thumb = photo.url_t;
         var origImage = photo.url_o;
-        //build the url of the photo in order to link to it
-        //var photoURL = 'http://farm' + photo.farm + '.static.flickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg'
         if(lat !== 0 && long !== 0) {
             var photoLatLang = new google.maps.LatLng(lat, long);
             var icon = {
@@ -62,8 +61,8 @@ $.ready(function () {
 
             google.maps.event.addListener(marker, 'click', function() {
               console.log('clicked!');
+              $('.overlay').css('display', 'block');
               $(imageDetail).css('display', 'block');
-              $('img', imageDetail).css('display', 'block');
               $('img', imageDetail).attr('src', origImage);
               $('figcaption', imageDetail).text(photo.title + ' - ' + photo.datetaken);
             });
